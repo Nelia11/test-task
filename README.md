@@ -1,21 +1,29 @@
-# Getting Started with Create React App
+## Setting Up the Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**React with Redux Toolkit and TypeScript:** The project was set up using Create React App with the TypeScript template. Redux Toolkit was chosen over the classic Redux approach due to its simplified store setup and reduced boilerplate.
 
-## Available Scripts
+## State Management with Redux Toolkit
 
-In the project directory, you can run:
+**User Data Fetching:** `createAsyncThunk` was used to handle asynchronous fetching of user data from the mock API (https://jsonplaceholder.typicode.com/users). This approach manages loading, success, and error states within Redux.
 
-### `npm start`
+**Slice Creation:** A slice was created using `createSlice` to manage user state.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Implementing the User Management Table
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Table Layout:** A simple table was designed to display user information, including name, username, email, and phone, with a focus on clean and readable design.
 
-### `npm run build`
+**Dynamic Filtering:** Individual search inputs were added for each table column, allowing users to filter by name, username, email, or phone. The filtering logic utilizes controlled components and updates the Redux state dynamically as users type, providing real-time feedback.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Type Safety with TypeScript
 
+**Type Definitions:** Interfaces were defined for user data, Redux state, and API response to ensure type safety across the application.
+
+**Error Handling:** Basic error handling was implemented to display messages when data fetching fails.
+
+## Styling and User Experience
+
+**Styled Components:** Styled-components were used for styling the table and search inputs, providing scoped, maintainable styles that are easy to adjust.
+
+## Deployment
+
+**GitHub Actions:** GitHub Actions were configured to automate the build and deployment process, pushing updates to GitHub Pages whenever changes are made to the main branch. Open [https://nelia11.github.io/test-task/](https://nelia11.github.io/test-task/) to view it in the browser.
